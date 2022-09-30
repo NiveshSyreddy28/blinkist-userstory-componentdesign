@@ -1,9 +1,13 @@
 import React from 'react'
 
-const BookThumbnail = () => {
+interface BookThumbnailProps {
+  src : string;
+}
+
+const BookThumbnail = ({src}: BookThumbnailProps) => {
   return (
     <div>
-      <p>Book Thumbnail</p>
+      <img src={src} alt="" />
     </div>
   )
 }

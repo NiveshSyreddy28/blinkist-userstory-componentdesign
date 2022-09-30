@@ -3,7 +3,8 @@ import React from 'react'
 const Progressbar = () => {
   return (
     <div>
-      <p>Progressbar</p>
+      <div></div>
+      <div></div>
     </div>
   )
 }

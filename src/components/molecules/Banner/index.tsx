@@ -1,9 +1,16 @@
 import React from 'react'
+import Typography from '../../atoms/Typography';
 
-const Banner = () => {
+interface BannerProps {
+  src : string;
+ }
+
+const Banner = ({src} : BannerProps) => {
   return (
-    <div>
-      <p>Banner</p>
+    <div style={{
+      background: `url(${src})`
+    }}>
+    <Typography children='Which books should we blink next?' variant='h2' />
     </div>
   )
 }

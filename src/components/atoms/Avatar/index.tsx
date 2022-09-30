@@ -1,9 +1,17 @@
 import React from 'react'
+import MuiAvatar from '@mui/material/Avatar';
+import Icon from '../Icon/index';
+import { IconButton } from '@mui/material';
 
-const Avatar = () => {
+interface AvatarProps {
+  src: string;
+}
+
+const Avatar = ({src}: AvatarProps) => {
   return (
     <div>
-      <p>Avatar</p>
+      <MuiAvatar src={src} />
+      <Icon icon={<IconButton/>}/>
     </div>
   )
 }

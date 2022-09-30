@@ -3,12 +3,20 @@ import { Box, Grid, Modal, TextField } from '@material-ui/core'
 import Typography from '../../atoms/Typography';
 import Button from '../../atoms/Button';
 
-const KindlePopup = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-  const handleAddEmail = () => {}
-  const handleNeedHelp = () => {}
+interface KindlePopUpProps {
+  open : boolean;
+  handleClose : () => void;
+}
+
+const KindlePopup = (props: KindlePopUpProps) => {
+  const{open, handleClose} = props;
+
+  const handleAddEmail = () => {
+
+  }
+  const handleNeedHelp = () => {
+
+  }
   return (
     <div>
       <Modal
@@ -16,7 +24,7 @@ const KindlePopup = () => {
       onClose={handleClose}
       >
         <Box>
-          <Typography children='Set up your Kindle' variant='h1'/>
+        <Typography children='Set up your Kindle' variant='h1'/>
           <Typography children='Send blinks right to your Kindle from within the app' variant='h1'/>
           <Grid container direction="row">
               <TextField placeholder='email'/>
@@ -24,6 +32,7 @@ const KindlePopup = () => {
           </Grid>
           <Button children='Add email' onclick={handleAddEmail} variant="contained"/>
           <Button children='Need help?' onclick={handleNeedHelp} variant="outlined"/>
+          <Button children='Continue Reading' variant='contained' onclick={()=>{}}/>
         </Box>
       </Modal>
     </div>

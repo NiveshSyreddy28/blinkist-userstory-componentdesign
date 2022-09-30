@@ -1,13 +1,16 @@
 import React from 'react'
 import { TextField } from '@mui/material'
 
-const Searchbar = () => {
-  const handleChange = () => {
+interface SearchBarProps {
+  handleChange : ()=> void;
+  placeholderText : string
+}
 
-  }
+const Searchbar = (props: SearchBarProps) => {
+const{handleChange, placeholderText} = props;
   return (
     <div>
-      <TextField placeholder={""} onChange={handleChange}/>
+      <TextField placeholder={placeholderText} onChange={handleChange}/>
     </div>
   )
 }

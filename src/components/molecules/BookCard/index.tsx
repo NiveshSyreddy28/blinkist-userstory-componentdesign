@@ -5,18 +5,26 @@ import Icon from '../../atoms/Icon';
 import ProgressBar from '../../atoms/ProgressBar';
 import IconLabel from '../Iconlabel';
 
-const BookCard = () => {
+interface BookCardProps {
+  bookImage : string;
+  bookName : string;
+  authorName : string;
+  timeRead : string;
+}
+
+const BookCard = (props: BookCardProps) => {
+  const {bookImage, bookName, authorName, timeRead} = props;
   return (
     <Card>
       <CardMedia
         component="img"
-        image={"book Image"}
-        alt="book name"
+        image={bookImage}
+        alt={bookName}
       />
       <CardContent>
-        <Typography  variant="h5" children="Book Title"/>
-        <Typography variant="body2" children="Author name"/>
-        <IconLabel icon={<Icon icon={<></>}/>} label = "15 min"/>
+        <Typography  variant="h5" children={bookName}/>
+        <Typography variant="body2" children={authorName}/>
+        <IconLabel icon={<Icon icon={<></>}/>} label = {timeRead}/>
         <ProgressBar/>
       </CardContent>
 

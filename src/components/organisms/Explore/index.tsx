@@ -4,6 +4,7 @@ const Explore = () => {
   return (
     <div>
       <Button onclick={()=>{} } variant={''} children={'Explore'}></Button>
+      {/* Render explore menu*/}
     </div>
   )
 }

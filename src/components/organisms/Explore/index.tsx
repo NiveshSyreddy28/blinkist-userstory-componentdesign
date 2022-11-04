@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Button from '../../atoms/Button'
 const Explore = () => {
   return (
     <div>
-      <p>Explore drop down</p>
+      <Button onclick={()=>{} } variant={''} children={'Explore'}></Button>
     </div>
   )
 }

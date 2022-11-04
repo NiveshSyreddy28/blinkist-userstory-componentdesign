@@ -1,9 +1,13 @@
 import React from 'react'
 
-const Icon = () => {
+interface IconProps {
+  icon: any
+}
+
+const Icon = ({icon}: IconProps) => {
   return (
     <div>
-      <p>Icon</p>
+      {icon}
     </div>
   )
 }

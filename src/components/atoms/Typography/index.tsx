@@ -1,11 +1,16 @@
 import React from 'react'
 
-const index = () => {
+interface TypographyProps {
+  variant : string;
+  children : string;
+}
+
+const Typography = ({variant, children}: TypographyProps) => {
   return (
-    <div>
-      <p>Typography</p>
-    </div>
+    <Typography variant={variant}>
+      {children}
+    </Typography>
   )
 }
 
-export default index
+export default Typography
